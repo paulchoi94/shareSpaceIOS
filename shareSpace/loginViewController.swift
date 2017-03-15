@@ -9,17 +9,101 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class loginViewController: UIViewController {
+
+class loginViewController: UIViewController, FBSDKLoginButtonDelegate{
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let fbLoginButton = FBSDKLoginButton()
+        view.addSubview(fbLoginButton)
+        fbLoginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
+        
+        fbLoginButton.delegate = self
+        fbLoginButton.readPermissions = ["email", "public_profile"]
+        
+        
+        let customFBButton = UIButton(type: .system)
+        customFBButton.backgroundColor = .blue
+        customFBButton.frame = CGRect(x: 16, y: 116, width: view.frame.width - 32, height: 50)
+        customFBButton.setTitle("Login with Facebook", for: .normal)
+        customFBButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        customFBButton.setTitleColor( .white, for: .normal)
+        view.addSubview(customFBButton)
+        
+        customFBButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)
+        
     }
 
+    func handleCustomFBLogin(){
+        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self) { (result, err) in
+            if err != nil{
+                print ("log in failed")
+                return
+            }
+            
+            self.storeToFirebase()
+        }
+    }
+    
+    func storeToFirebase(){
+        let accessToken = FBSDKAccessToken.current()
+        guard let accessTokenString = accessToken?.tokenString else
+        { return }
+        
+        let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, err) in
+            if err != nil{
+                print ("went wrong with FB user")
+                return
+            }
+            
+            print ("successfully logged in with fb user", user!)
+        })
+        
+        //getting the id name and email
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
+            
+            if err != nil {
+                print ("failed to start graph request:", err!)
+                return
+            }
+            
+            print (result!)
+            
+        }
+
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print ("did log out of facebook")
+    }
+    
+    //using facebook's login button
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+            return
+        }
+        
+        //getting the id name and email
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
+            
+            if err != nil {
+                print ("failed to start graph request:", err!)
+                return
+            }
+            
+            print (result!)
+            
+        }
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -109,7 +193,7 @@ class loginViewController: UIViewController {
                     */
                     
                 }
-                    //there was an error
+                //there was an error
                 else{
                     let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
                     
@@ -124,14 +208,10 @@ class loginViewController: UIViewController {
             
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //facebook login
+    @IBAction func facebookLogin(_ sender: Any) {
     }
-    */
+    
 
 }
