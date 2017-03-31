@@ -162,53 +162,14 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate{
 
     @IBAction func signup(_ sender: Any) {
         
-        if self.usernameField.text == "" || self.passwordField.text == ""{
-            
-            let alertController = UIAlertController(title: "Oops!", message: "Please enter email and password", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            self.present(alertController, animated: true, completion: nil)
-            
-        }
-        //create an account
-        else{
-            
-            FIRAuth.auth()?.createUser(withEmail: self.usernameField.text!, password: self.passwordField.text!, completion: {
-                (user, error) in
-                
-                //send it to the next view
-                if error == nil{
-                    let alertController = UIAlertController(title: "Congrats!", message: "account was created", preferredStyle: .alert)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
+        let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "signUpViewController") as UIViewController
                     
-                    self.present(alertController, animated: true, completion: nil)
-                    /*
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    
-                    let vc: UIViewController = storyboard.instantiateViewController(withIdentifier: "mainViewController") as UIViewController
-                    
-                    self.present(vc, animated: true, completion: nil)
-                    */
-                    
-                }
-                //there was an error
-                else{
-                    let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
-                    
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)
-                    
-                }
-                
-            })
-            
-        }
+        self.present(vc, animated: true, completion: nil)
+    
+        
     }
     
     //facebook login
