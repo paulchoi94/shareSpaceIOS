@@ -20,12 +20,14 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let fbLoginButton = FBSDKLoginButton()
+        let fbLoginButton = FBSDKLoginButton(type: .system)
         view.addSubview(fbLoginButton)
         fbLoginButton.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
         
         fbLoginButton.delegate = self
         fbLoginButton.readPermissions = ["email", "public_profile"]
+        /*
+        fbLoginButton.addTarget(self, action: #selector(handleCustomFBLogin), for: .touchUpInside)*/
         
         
         let customFBButton = UIButton(type: .system)
