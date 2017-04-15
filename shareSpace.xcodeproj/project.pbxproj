@@ -17,6 +17,11 @@
 		3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743B2B21E764DC10003DFFA /* loginViewController.swift */; };
 		3777068F1E776FA1003E8D27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */; };
 		37B6A26F1E8EF968005BA9E2 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */; };
+		6A8F8D711E91E39900915969 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D701E91E39900915969 /* searchViewController.swift */; };
+		6A8F8D731E91E3A800915969 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D721E91E3A800915969 /* homeViewController.swift */; };
+		6A8F8D751E91E44400915969 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D741E91E44400915969 /* messageViewController.swift */; };
+		6A8F8D771E91E45500915969 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D761E91E45500915969 /* profileViewController.swift */; };
+		6A8F8D791E91FE7B00915969 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D781E91FE7B00915969 /* paymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		375D605F1E78644D00F57357 /* shareSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareSpace.entitlements; sourceTree = "<group>"; };
 		3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		6A8F8D701E91E39900915969 /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		6A8F8D721E91E3A800915969 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		6A8F8D741E91E44400915969 /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
+		6A8F8D761E91E45500915969 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		6A8F8D781E91FE7B00915969 /* paymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
 		8FFF9C754404D26F9D5327E3 /* Pods-shareSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shareSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shareSpace/Pods-shareSpace.debug.xcconfig"; sourceTree = "<group>"; };
 		E0016A0BC70B2B4FC74C90BD /* Pods-shareSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shareSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-shareSpace/Pods-shareSpace.release.xcconfig"; sourceTree = "<group>"; };
 		F09F56D70B1827C3D503C577 /* Pods_shareSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shareSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +128,11 @@
 				37017C7A1E763C2E00D5F299 /* LaunchScreen.storyboard */,
 				37017C7D1E763C2E00D5F299 /* Info.plist */,
 				3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */,
+				6A8F8D701E91E39900915969 /* searchViewController.swift */,
+				6A8F8D721E91E3A800915969 /* homeViewController.swift */,
+				6A8F8D741E91E44400915969 /* messageViewController.swift */,
+				6A8F8D761E91E45500915969 /* profileViewController.swift */,
+				6A8F8D781E91FE7B00915969 /* paymentViewController.swift */,
 			);
 			path = shareSpace;
 			sourceTree = "<group>";
@@ -351,6 +366,11 @@
 			files = (
 				3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */,
 				37017C701E763C2E00D5F299 /* AppDelegate.swift in Sources */,
+				6A8F8D771E91E45500915969 /* profileViewController.swift in Sources */,
+				6A8F8D791E91FE7B00915969 /* paymentViewController.swift in Sources */,
+				6A8F8D711E91E39900915969 /* searchViewController.swift in Sources */,
+				6A8F8D731E91E3A800915969 /* homeViewController.swift in Sources */,
+				6A8F8D751E91E44400915969 /* messageViewController.swift in Sources */,
 				37B6A26F1E8EF968005BA9E2 /* signUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
