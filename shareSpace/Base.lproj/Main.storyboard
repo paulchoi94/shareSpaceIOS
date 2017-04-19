@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6oS-sr-0Zr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6oS-sr-0Zr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -82,24 +82,34 @@
             </objects>
             <point key="canvasLocation" x="-1682" y="2308"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="bOo-8d-leA">
+        <!--Item-->
+        <scene sceneID="IAv-7o-VcJ">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="ee3-aT-WwZ" customClass="homeViewController" customModule="shareSpace" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vfB-ft-Bo2"/>
-                        <viewControllerLayoutGuide type="bottom" id="SdU-3u-LCE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WYY-Sx-fkC">
+                <tableViewController id="NO2-5p-Be7" customClass="homeViewController" customModule="shareSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="V08-Ys-dhs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="pDt-fL-k8S"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xk-B2-qVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="16i-LM-jD7">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="16i-LM-jD7" id="aoR-vE-8An">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NO2-5p-Be7" id="zlc-Gw-v00"/>
+                            <outlet property="delegate" destination="NO2-5p-Be7" id="VB9-Qp-Va1"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="oBP-Bu-dtF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uV-rd-rtq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1682" y="332"/>
+            <point key="canvasLocation" x="-1682" y="312"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IHz-py-6j7">
@@ -111,7 +121,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ee3-aT-WwZ" kind="relationship" relationship="viewControllers" id="1iz-K1-1Bu"/>
+                        <segue destination="NO2-5p-Be7" kind="relationship" relationship="viewControllers" id="rfZ-6h-Lez"/>
                         <segue destination="pkD-cm-b9l" kind="relationship" relationship="viewControllers" id="RUT-Hl-A1r"/>
                         <segue destination="BGd-Ne-Xgw" kind="relationship" relationship="viewControllers" id="PSf-g9-Dpz"/>
                         <segue destination="nRU-Yk-FMF" kind="relationship" relationship="viewControllers" id="4Ow-SI-bHp"/>
