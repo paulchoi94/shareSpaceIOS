@@ -15,10 +15,10 @@
 		37017C871E763C2E00D5F299 /* shareSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37017C861E763C2E00D5F299 /* shareSpaceTests.swift */; };
 		37017C921E763C2E00D5F299 /* shareSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37017C911E763C2E00D5F299 /* shareSpaceUITests.swift */; };
 		3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743B2B21E764DC10003DFFA /* loginViewController.swift */; };
-		3777068F1E776FA1003E8D27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */; };
 		37B6A26F1E8EF968005BA9E2 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */; };
+		6A0F9D6F1EAD247600EFE5A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0F9D6E1EAD247600EFE5A1 /* GoogleService-Info.plist */; };
+		6A0F9D731EAD24EB00EFE5A1 /* homeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */; };
 		6A8F8D711E91E39900915969 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D701E91E39900915969 /* searchViewController.swift */; };
-		6A8F8D731E91E3A800915969 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D721E91E3A800915969 /* homeViewController.swift */; };
 		6A8F8D751E91E44400915969 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D741E91E44400915969 /* messageViewController.swift */; };
 		6A8F8D771E91E45500915969 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D761E91E45500915969 /* profileViewController.swift */; };
 		6A8F8D791E91FE7B00915969 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8D781E91FE7B00915969 /* paymentViewController.swift */; };
@@ -56,10 +56,10 @@
 		37017C931E763C2E00D5F299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3743B2B21E764DC10003DFFA /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		375D605F1E78644D00F57357 /* shareSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareSpace.entitlements; sourceTree = "<group>"; };
-		3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		6A0F9D6E1EAD247600EFE5A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeTableViewController.swift; sourceTree = "<group>"; };
 		6A8F8D701E91E39900915969 /* searchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
-		6A8F8D721E91E3A800915969 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		6A8F8D741E91E44400915969 /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
 		6A8F8D761E91E45500915969 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		6A8F8D781E91FE7B00915969 /* paymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
@@ -119,12 +119,13 @@
 		37017C6E1E763C2E00D5F299 /* shareSpace */ = {
 			isa = PBXGroup;
 			children = (
+				6A0F9D6E1EAD247600EFE5A1 /* GoogleService-Info.plist */,
 				375D605F1E78644D00F57357 /* shareSpace.entitlements */,
 				37017C6F1E763C2E00D5F299 /* AppDelegate.swift */,
 				3743B2B21E764DC10003DFFA /* loginViewController.swift */,
 				37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */,
 				6A8F8D701E91E39900915969 /* searchViewController.swift */,
-				6A8F8D721E91E3A800915969 /* homeViewController.swift */,
+				6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */,
 				6A8F8D741E91E44400915969 /* messageViewController.swift */,
 				6A8F8D761E91E45500915969 /* profileViewController.swift */,
 				6A8F8D781E91FE7B00915969 /* paymentViewController.swift */,
@@ -132,7 +133,6 @@
 				37017C781E763C2E00D5F299 /* Assets.xcassets */,
 				37017C7A1E763C2E00D5F299 /* LaunchScreen.storyboard */,
 				37017C7D1E763C2E00D5F299 /* Info.plist */,
-				3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */,
 			);
 			path = shareSpace;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37017C7C1E763C2E00D5F299 /* LaunchScreen.storyboard in Resources */,
-				3777068F1E776FA1003E8D27 /* GoogleService-Info.plist in Resources */,
+				6A0F9D6F1EAD247600EFE5A1 /* GoogleService-Info.plist in Resources */,
 				37017C791E763C2E00D5F299 /* Assets.xcassets in Resources */,
 				37017C771E763C2E00D5F299 /* Main.storyboard in Resources */,
 			);
@@ -339,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DA3863C1840516521EA33ABF /* [CP] Embed Pods Frameworks */ = {
@@ -364,12 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A0F9D731EAD24EB00EFE5A1 /* homeTableViewController.swift in Sources */,
 				3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */,
 				37017C701E763C2E00D5F299 /* AppDelegate.swift in Sources */,
 				6A8F8D771E91E45500915969 /* profileViewController.swift in Sources */,
 				6A8F8D791E91FE7B00915969 /* paymentViewController.swift in Sources */,
 				6A8F8D711E91E39900915969 /* searchViewController.swift in Sources */,
-				6A8F8D731E91E3A800915969 /* homeViewController.swift in Sources */,
 				6A8F8D751E91E44400915969 /* messageViewController.swift in Sources */,
 				37B6A26F1E8EF968005BA9E2 /* signUpViewController.swift in Sources */,
 			);
@@ -531,6 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oray.shareSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -547,6 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oray.shareSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
