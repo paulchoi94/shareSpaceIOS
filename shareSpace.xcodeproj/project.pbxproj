@@ -123,16 +123,16 @@
 				37017C6F1E763C2E00D5F299 /* AppDelegate.swift */,
 				3743B2B21E764DC10003DFFA /* loginViewController.swift */,
 				37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */,
-				37017C751E763C2E00D5F299 /* Main.storyboard */,
-				37017C781E763C2E00D5F299 /* Assets.xcassets */,
-				37017C7A1E763C2E00D5F299 /* LaunchScreen.storyboard */,
-				37017C7D1E763C2E00D5F299 /* Info.plist */,
-				3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */,
 				6A8F8D701E91E39900915969 /* searchViewController.swift */,
 				6A8F8D721E91E3A800915969 /* homeViewController.swift */,
 				6A8F8D741E91E44400915969 /* messageViewController.swift */,
 				6A8F8D761E91E45500915969 /* profileViewController.swift */,
 				6A8F8D781E91FE7B00915969 /* paymentViewController.swift */,
+				37017C751E763C2E00D5F299 /* Main.storyboard */,
+				37017C781E763C2E00D5F299 /* Assets.xcassets */,
+				37017C7A1E763C2E00D5F299 /* LaunchScreen.storyboard */,
+				37017C7D1E763C2E00D5F299 /* Info.plist */,
+				3777068E1E776FA1003E8D27 /* GoogleService-Info.plist */,
 			);
 			path = shareSpace;
 			sourceTree = "<group>";
