@@ -15,6 +15,7 @@
 		37017C871E763C2E00D5F299 /* shareSpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37017C861E763C2E00D5F299 /* shareSpaceTests.swift */; };
 		37017C921E763C2E00D5F299 /* shareSpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37017C911E763C2E00D5F299 /* shareSpaceUITests.swift */; };
 		3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743B2B21E764DC10003DFFA /* loginViewController.swift */; };
+		379263E01EDFA81500FF1F8F /* authViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379263DF1EDFA81500FF1F8F /* authViewController.swift */; };
 		37B6A26F1E8EF968005BA9E2 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */; };
 		6A0F9D6F1EAD247600EFE5A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0F9D6E1EAD247600EFE5A1 /* GoogleService-Info.plist */; };
 		6A0F9D731EAD24EB00EFE5A1 /* homeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */; };
@@ -57,6 +58,7 @@
 		37017C931E763C2E00D5F299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3743B2B21E764DC10003DFFA /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		375D605F1E78644D00F57357 /* shareSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shareSpace.entitlements; sourceTree = "<group>"; };
+		379263DF1EDFA81500FF1F8F /* authViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = authViewController.swift; sourceTree = "<group>"; };
 		37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		6A0F9D6E1EAD247600EFE5A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeTableViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				375D605F1E78644D00F57357 /* shareSpace.entitlements */,
 				37017C6F1E763C2E00D5F299 /* AppDelegate.swift */,
 				3743B2B21E764DC10003DFFA /* loginViewController.swift */,
+				379263DF1EDFA81500FF1F8F /* authViewController.swift */,
 				37B6A26E1E8EF968005BA9E2 /* signUpViewController.swift */,
 				6A8F8D701E91E39900915969 /* searchViewController.swift */,
 				6A0F9D721EAD24EB00EFE5A1 /* homeTableViewController.swift */,
@@ -342,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DA3863C1840516521EA33ABF /* [CP] Embed Pods Frameworks */ = {
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379263E01EDFA81500FF1F8F /* authViewController.swift in Sources */,
 				6A0F9D731EAD24EB00EFE5A1 /* homeTableViewController.swift in Sources */,
 				3743B2B31E764DC10003DFFA /* loginViewController.swift in Sources */,
 				6A89083A1EDB65EC00BE7E7B /* preauthViewController.swift in Sources */,
